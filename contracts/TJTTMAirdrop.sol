@@ -31,8 +31,8 @@ contract TJTTMAirdrop is Ownable, Pausable {
     /**
     * @dev Add airdrops, transfers the tokens from msg.sender to airdrop contract address.
     * @param _airdrops array [
-    *       { nft: <contract_address>, id: <token_id> },
-    *       { nft: <contract_address>, id: <token_id> },
+    *       [ <contract_address>, <token_id_1> ],
+    *       [ <contract_address>, <token_id_2> ],
     * ]
     */
     function addAirdrops(Airdrop[] memory _airdrops) public onlyOwner {

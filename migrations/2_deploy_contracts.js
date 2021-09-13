@@ -11,7 +11,7 @@ module.exports = async function (deployer) {
   const deployedTJTTM = await TJTTM.deployed();
 
   // Sales contract deploy
-  const _tokenAddress = deployedTJTTM.address();
+  const _tokenAddress = deployedTJTTM.address;
   await deployer.deploy(TJTTMSales, _tokenAddress, SALE_START_TIME);
   const deployedSalesContract = await TJTTMSales.deployed();
 
@@ -21,7 +21,10 @@ module.exports = async function (deployer) {
 
 
   // Operations post deployment
+
   // 1. Approval to airdrop contract
+  await deployedTJTTM.setApprovalForAll(deployedAirdropContract.address, true);
+
   // 2. Ownership to sale contract
 
 };
