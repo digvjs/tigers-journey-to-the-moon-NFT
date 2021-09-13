@@ -1,9 +1,8 @@
+# Tigers Journey To The Moon NFT Smart Contract
+
 ### Pre-requisites
 
-* Truffle v5.2.4 (core: 5.2.4)
-* Solidity - 0.6.12 (solc-js)
 * Node v14.16.0
-* Web3.js v1.2.9
 
 ## Setup Process
 
